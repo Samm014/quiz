@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import Quiz from '../components/Quiz'
 import ModelQuestion from '../model/question'
 
-const BASE_URL = 'http://192.168.15.14:3000/api'
+const BASE_URL = 'http://quiz-nine-theta.vercel.app/api'
 
 export default function Home() {
 
