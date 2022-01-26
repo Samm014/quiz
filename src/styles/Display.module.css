@@ -24,11 +24,11 @@
 @media screen and (max-width: 728px){
 
     .text{
-        font-size: 1rem;
         text-align: center;
     }
-
+    
     .value{
+        font-size: 3rem;
         width: 130px;
         height: 130px;
     }
