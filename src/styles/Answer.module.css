@@ -1,9 +1,10 @@
 .answer{
     display: flex;
+    justify-content: center;
     height: 100px;
-    min-width: 500px;
+    min-width: 400px;
     width: 80%;
-    margin: 10px;
+    margin: 10px 0;
     cursor: pointer;
     perspective: 1000px;
 }
@@ -79,4 +80,13 @@
 .value{
     font-size: 1.3rem;
     font-weight: 700;
+}
+
+@media screen and (max-width: 1680px) {
+    .answer{
+        height: 70px;
+    }
+}
+
+@media screen and (max-width: 728px) {
 }

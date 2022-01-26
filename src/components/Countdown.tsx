@@ -23,11 +23,18 @@ export default function Countdown(props: CountdownProps){
         );
       };
 
+      function renderSize(){
+        const width = window.screen.width;
+        if(width < 1500){
+          return 130
+        }
+      }
+
     return(
         <div className={styles.countdown}>
              <CountdownCircleTimer
                 duration={props.duration}
-                size={150}
+                size={renderSize()}
                 isPlaying
                 onComplete={props.tempoEsgotado}
                 colors={[

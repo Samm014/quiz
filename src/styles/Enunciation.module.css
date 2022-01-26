@@ -1,8 +1,24 @@
 .enunciation{
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .text{
     font-size: 2.5rem;
+    text-align: center;
     font-weight: 700;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1680px) {
+    .text{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .text{
+        margin-bottom: 30px;
+    }
 }
