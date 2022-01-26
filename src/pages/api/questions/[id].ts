@@ -1,6 +1,6 @@
 import questions from "../dataBaseQuestions";
 
-export default (req, res) => {
+export default function quizIds(req, res){
     const idURL = +req.query.id;
 
     const questionsSeletedbyURL =  questions.filter(question => question.id === idURL)

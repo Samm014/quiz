@@ -97,7 +97,7 @@ const questions: ModelQuestion[]=[
         ModelAnswer.errada('Barão de Mauá'),
         ModelAnswer.errada('Marquês de Pombal'),
         ModelAnswer.certa('Duque de Caxias'),
-    ]),
+        ]),
 ]
 
 export default questions

@@ -33,6 +33,10 @@ export default class ModelAnswer{
         return new ModelAnswer(this.#valor, this.#certa, true)
     }
 
+    static criarUsandoJSON(obj: ModelAnswer): ModelAnswer{
+        return new ModelAnswer(obj.valor,obj.certa,obj.revelada)
+    }
+
     toObject(){
         return {
             valor: this.#valor,

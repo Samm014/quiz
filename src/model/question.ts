@@ -1,4 +1,3 @@
-import { passThroughSymbol } from "next/dist/server/web/spec-compliant/fetch-event"
 import { embaralhar } from "../functions/arrays"
 import ModelAnswer from "./answer"
 
@@ -22,12 +21,20 @@ export default class ModelQuestion{
         return this.#id
     }
 
+    get enunciado(){
+        return this.#enunciado
+    }
+
     get respostas(){
         return this.#respostas
     }
 
     get acertou(){
-        return this.#id
+        return this.#acertou
+    }
+
+    get naoRespondida(){
+        return !this.respondida
     }
 
     get respondida(){
@@ -52,6 +59,11 @@ export default class ModelQuestion{
     embaralharRespostas(): ModelQuestion{
         let respostasEmbaralhadas = embaralhar(this.#respostas)
         return new ModelQuestion(this.#id,this.#enunciado, respostasEmbaralhadas,this.#acertou)
+    }
+
+    static criarUsandoJSON(obj: ModelQuestion): ModelQuestion{
+        const answers = obj.respostas.map(resp => ModelAnswer.criarUsandoJSON(resp))
+        return new ModelQuestion(obj.id,obj.enunciado,answers,obj.acertou)
     }
 
     toObject(){
